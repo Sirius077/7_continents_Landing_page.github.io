@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Circe-Bold';
+  src: url('../fonts/Circe-Bold.woff2') format('woff2'), url('../fonts/Circe-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circe-Regular';
+  src: url('../fonts/Circe-Regular.woff2') format('woff2'), url('../fonts/Circe-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Circe-Regular', sans-serif;
+}
+section {
+  margin-top: 10rem;
+}
+button {
+  font-size: 1.1rem;
+  background-color: #ffaf02;
+  color: #fff;
+  width: 80%;
+  line-height: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+  border-radius: 2.5rem;
+}
+.main {
+  margin-top: 3rem;
+}
+.main .logo-text {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+.main .contacts p {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+.main .contacts span {
+  font-family: 'Circe-Bold', sans-serif;
+  font-size: 1.7rem;
+}
+.main-button:hover {
+  box-shadow: 0px 3px 10px 0px rgba(255, 157, 1, 0.6);
+}
+.main .hero {
+  background: url(../img/main/main_bg.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 5rem;
+}
+.main-content h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 5.7rem;
+  font-weight: 700;
+}
+.main-content span {
+  display: block;
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+.main-features-block {
+  margin-bottom: 3.5rem;
+}
+.main-features img {
+  display: inline-block;
+}
+.main-features h3 {
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+.main-features p {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+@media (max-width: 991px) {
+  .main .logo-text {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 776px) {
+  .main .logo-text {
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .main .hero {
+    background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
+  }
+}
+@media (max-width: 487px) {
+  .main-content h1 {
+    font-size: 4.2rem;
+  }
+  .main-content span {
+    font-size: 2.6rem;
+  }
+  .main-features-block h3 {
+    font-size: 1.6rem;
+  }
+}
