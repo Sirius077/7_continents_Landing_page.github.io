@@ -23,12 +23,21 @@ button {
   font-size: 1.1rem;
   background-color: #ffaf02;
   color: #fff;
-  width: 80%;
+  width: 100%;
   line-height: 6rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border: none;
-  border-radius: 2.5rem;
+  border-radius: 2.75rem;
+}
+button:hover {
+  box-shadow: 0px 3px 10px 0px rgba(255, 157, 1, 0.6);
+}
+input {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 2.75rem;
+  border: 1px #d1d1d1 solid;
 }
 .main {
   margin-top: 3rem;
@@ -44,9 +53,6 @@ button {
 .main .contacts span {
   font-family: 'Circe-Bold', sans-serif;
   font-size: 1.7rem;
-}
-.main-button:hover {
-  box-shadow: 0px 3px 10px 0px rgba(255, 157, 1, 0.6);
 }
 .main .hero {
   background: url(../img/main/main_bg.jpg) no-repeat center;
@@ -82,20 +88,119 @@ button {
   display: inline-block;
   font-size: 1.4rem;
 }
+.consultation {
+  background: url(../img/consultation/consultation_bg.jpg) no-repeat center;
+  background-size: cover;
+}
+.consultation-header h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.consultation-header span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 0rem;
+}
+.consultation .zigzag {
+  margin: 3rem;
+  position: relative;
+  height: 2rem;
+  z-index: 1;
+  opacity: 0.5;
+  width: 50vw;
+  margin: 0 auto;
+}
+.consultation .zigzag:before,
+.consultation .zigzag:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.consultation .zigzag:before {
+  height: 12px;
+  top: 110%;
+  background: linear-gradient(-135deg, #00cbff 8px, transparent 0) 0 8px, linear-gradient(135deg, #00cbff 8px, transparent 0) 0 8px;
+  background-position: top left;
+  background-repeat: repeat-x;
+  background-size: 16px 16px;
+}
+.consultation .zigzag:after {
+  height: 16px;
+  top: 100%;
+  background: linear-gradient(-135deg, #fff 8px, transparent 0) 0 8px, linear-gradient(135deg, #fff 8px, transparent 0) 0 8px;
+  background-position: top left;
+  background-repeat: repeat-x;
+  background-size: 16px 16px;
+}
+.consultation-form span {
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.consultation-form input {
+  font-size: 1.6rem;
+}
+.consultation-form button {
+  font-size: 1.6rem;
+  line-height: 5.5rem;
+}
+.consultation .recall {
+  margin-top: 4rem;
+  padding-bottom: 10rem;
+}
+.consultation .recall p {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+.consultation .recall a {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-left: 1rem;
+  word-break: keep-all;
+}
 @media (max-width: 991px) {
   .main .logo-text {
     font-size: 1.4rem;
     margin-left: 2rem;
+  }
+  .consultation {
+    background: none;
+  }
+  .consultation-form button {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 776px) {
   .main .logo-text {
     margin-left: 0;
   }
+  .consultation-form input {
+    margin-top: 2rem;
+  }
+  .consultation-form button {
+    margin-top: 2rem;
+  }
 }
 @media (max-width: 576px) {
   .main .hero {
     background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
+  }
+  .consultation-header h2 {
+    font-size: 3rem;
+  }
+  .consultation-header span {
+    font-size: 2.2rem;
+  }
+  .consultation .recall a {
+    display: block;
   }
 }
 @media (max-width: 487px) {
@@ -107,5 +212,14 @@ button {
   }
   .main-features-block h3 {
     font-size: 1.6rem;
+  }
+  .consultation-header h2 {
+    font-size: 2rem;
+  }
+  .consultation-header span {
+    font-size: 1.6rem;
+  }
+  .consultation-form button {
+    font-size: 1.3rem;
   }
 }

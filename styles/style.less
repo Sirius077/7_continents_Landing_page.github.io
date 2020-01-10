@@ -33,6 +33,9 @@
 @bg-gradient: linear-gradient(149.0deg, #d8f0f0 15%, #fdfde0 84%);
 @light: #fff;
 @dark: #000;
+@border-color: #d1d1d1;
+@zigzag-color: linear-gradient(-135deg, #00cbff 8px, transparent 0) 0 8px, linear-gradient(135deg, #00cbff 8px, transparent 0) 0 8px;
+
 
 html {
     font-size: 10px;
@@ -51,12 +54,22 @@ button {
     font-size: 1.1rem;
     background-color: @button-color;
     color: @light;
-    width: 80%;
+    width: 100%;
     line-height: 6rem;
     padding-left: 2rem;
     padding-right: 2rem;
     border: none;
-    border-radius: 2.5rem;
+    border-radius: 2.75rem;
+     &:hover {
+            box-shadow: 0px 3px 10px 0px rgba(255, 157, 1, 0.6);
+        }
+}
+
+input {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 2.75rem;
+    border: 1px @border-color solid;
 }
 
 .main {
@@ -79,11 +92,6 @@ button {
         }
     }
 
-    &-button {
-        &:hover {
-            box-shadow: 0px 3px 10px 0px rgba(255, 157, 1, 0.6);
-        }
-    }
 
     .hero {
         background: url(../img/main/main_bg.jpg) no-repeat center;
@@ -109,9 +117,10 @@ button {
     }
 
     &-features {
-        &-block{
+        &-block {
             margin-bottom: 3.5rem;
         }
+
         img {
             display: inline-block
         }
@@ -131,47 +140,191 @@ button {
     }
 }
 
+.consultation {
+    background: url(../img/consultation/consultation_bg.jpg) no-repeat center;
+    background-size: cover;
+    &-header {
+        h2 {
+            .sec();
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        span {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 0rem;
+        }
+    }
+
+    .zigzag {
+        margin: 3rem;
+        position: relative;
+        height: 2rem;
+        z-index: 1;
+        opacity: 0.5;
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    .zigzag:before,
+    .zigzag:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .zigzag:before {
+        height: 12px;
+        top: 110%;
+        background: @zigzag-color;
+        background-position: top left;
+        background-repeat: repeat-x;
+        background-size: 16px 16px;
+    }
+
+    .zigzag:after {
+        height: 16px;
+        top: 100%;
+        background: linear-gradient(-135deg, @light 8px, transparent 0) 0 8px, linear-gradient(135deg, @light 8px, transparent 0) 0 8px;
+        background-position: top left;
+        background-repeat: repeat-x;
+        background-size: 16px 16px;
+    }
+
+    &-form {
+        span {
+            display: block;
+            font-size: 1.6rem;
+            margin-top: 4rem;
+            margin-bottom:4rem;
+        }
+
+        input {
+            font-size: 1.6rem;
+        }
+
+        button {
+            font-size: 1.6rem;
+            line-height: 5.5rem;
+        }
+    }
+    .recall{
+        margin-top: 4rem;
+        padding-bottom: 10rem;
+        p{         
+            display: inline-block;
+            font-size: 1.6rem;
+            margin-right: 1rem;
+        }
+        a{
+            .sec();
+            font-size: 2rem;
+            font-weight: 700;
+            color:@dark;
+            margin-left: 1rem;
+            word-break:keep-all;
+        }
+    }
+}
+
 //Media
-@media (max-width:991px){
-    .main{
-        .logo{
-            &-text{
+@media (max-width:991px) {
+    .main {
+        .logo {
+            &-text {
                 font-size: 1.4rem;
                 margin-left: 2rem;
             }
         }
     }
+    .consultation{
+        background:none;
+        &-form{
+            button{
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
-@media (max-width:776px){
-    .main{
-        .logo{
-            &-text{
+
+@media (max-width:776px) {
+    .main {
+        .logo {
+            &-text {
                 margin-left: 0;
             }
         }
     }
-}
-@media (max-width:576px){
-    .main{
-        .hero{
-            background: @bg-gradient;
+    .consultation{
+        &-form{
+            input{
+            margin-top: 2rem;
+            }
+            button{
+                margin-top: 2rem;
+            }
         }
     }
 }
-@media (max-width:487px){
-    .main{
-        &-content{
-            h1{
-                font-size: 4.2rem;
+
+@media (max-width:576px) {
+    .main {
+        .hero {
+            background: @bg-gradient;
+        }
+    }
+    .consultation{
+        &-header{
+            h2{
+                font-size: 3rem;
             }
             span{
+                font-size: 2.2rem;
+            }
+        }
+        .recall{
+            a{
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width:487px) {
+    .main {
+        &-content {
+            h1 {
+                font-size: 4.2rem;
+            }
+
+            span {
                 font-size: 2.6rem;
             }
         }
-        &-features-block{
-                h3{
-                    font-size: 1.6rem;
-                }
+
+        &-features-block {
+            h3 {
+                font-size: 1.6rem;
             }
+        }
+    }
+    .consultation{
+        &-header{
+            h2{
+                font-size: 2rem;
+            }
+            span{
+                font-size: 1.6rem;
+            }
+        }
+        &-form{
+            button{
+                font-size: 1.3rem;
+            }
+        }
     }
 }
