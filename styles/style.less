@@ -35,6 +35,8 @@
 @dark: #000;
 @border-color: #d1d1d1;
 @zigzag-color: linear-gradient(-135deg, #00cbff 8px, transparent 0) 0 8px, linear-gradient(135deg, #00cbff 8px, transparent 0) 0 8px;
+@text-color: #001e28;
+@secondary-color: #d8f0f0;
 
 
 html {
@@ -43,9 +45,26 @@ html {
 
 body {
     .reg();
+    color: @text-color;
+
 }
 
-section {
+.section {
+
+    &-header {
+        padding-top: 10rem;
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            padding-bottom: 3rem;
+        }
+
+        span {
+            font-size: 2.2rem;
+        }
+    }
+
     margin-top: 10rem;
 
 }
@@ -60,9 +79,10 @@ button {
     padding-right: 2rem;
     border: none;
     border-radius: 2.75rem;
-     &:hover {
-            box-shadow: 0px 3px 10px 0px rgba(255, 157, 1, 0.6);
-        }
+
+    &:hover {
+        box-shadow: 0px 3px 10px 0px rgba(255, 157, 1, 0.6);
+    }
 }
 
 input {
@@ -70,6 +90,10 @@ input {
     padding: 1.5rem;
     border-radius: 2.75rem;
     border: 1px @border-color solid;
+}
+
+.prev {
+    display: none;
 }
 
 .main {
@@ -143,6 +167,7 @@ input {
 .consultation {
     background: url(../img/consultation/consultation_bg.jpg) no-repeat center;
     background-size: cover;
+
     &-header {
         h2 {
             .sec();
@@ -200,7 +225,7 @@ input {
             display: block;
             font-size: 1.6rem;
             margin-top: 4rem;
-            margin-bottom:4rem;
+            margin-bottom: 4rem;
         }
 
         input {
@@ -212,26 +237,160 @@ input {
             line-height: 5.5rem;
         }
     }
-    .recall{
+
+    .recall {
         margin-top: 4rem;
         padding-bottom: 10rem;
-        p{         
+
+        p {
             display: inline-block;
             font-size: 1.6rem;
             margin-right: 1rem;
         }
-        a{
+
+        a {
             .sec();
             font-size: 2rem;
             font-weight: 700;
-            color:@dark;
+            color: @dark;
             margin-left: 1rem;
-            word-break:keep-all;
+            word-break: keep-all;
+        }
+    }
+}
+
+//Prices
+.prices {
+    &-header {
+        padding-bottom: 7rem;
+    }
+
+    &-slider {
+        &-header {
+            &-button {
+                display: inline-block;
+                max-width: 34rem;
+                font-size: 1.8rem;
+                font-weight: 700;
+                background: @secondary-color;
+                color: @text-color;
+                line-height: 1.2;
+                padding: 1.9rem 7rem 1.9rem 7rem;
+                margin-left: 3rem;
+                margin-bottom: 6rem;
+                border-radius: 2rem 2rem 0.0px 0.0px;
+
+                &:hover {
+                    box-shadow: 0px 3px 10px 0px rgba(181, 211, 211, 0.6);
+                }
+
+                &-clicked {
+                    background: @button-color;
+                    color: @light;
+                }
+            }
+
+        }
+
+        &-description {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            padding: 1.5rem;
+            margin-left: 3rem;
+            border: 2px solid @secondary-color;
+
+            img {
+                max-width: 100%;
+            }
+
+            span {
+                position: absolute;
+                bottom: 10%;
+                font-size: 1.3rem;
+                color: @light;
+
+                &:first-of-type {
+                    background: url(../img/prices/tag.png) no-repeat 2rem left;
+                    background-size: contain;
+                    left: 10%;
+                }
+
+                &:last-of-type {
+                    right: 10%;
+                }
+            }
+
+            h4 {
+                font-size: 1.8rem;
+                font-weight: 700;
+                padding-top: 3rem;
+                padding-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                font-weight: 300;
+                padding-bottom: 3rem;
+            }
+
+            a {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: @text-color;
+                border-bottom: 5px solid @button-color;
+                text-decoration: none;
+
+                &:hover {
+                    border-bottom: 7px solid @button-color;
+
+                }
+            }
+        }
+
+        &-img {
+            position: relative;
+
+            img {
+                min-width: 100%;
+            }
+
+            &-subtitle {
+                position: absolute;
+                bottom: 0;
+                background: rgb(6, 54, 77);
+                background: linear-gradient(0deg, rgba(6, 54, 77, 1) 0%, rgba(1, 30, 41, 0.1) 100%);
+                width: 100%;
+                height: 25%;
+                z-index: 9;
+            }
+        }
+
+        &-icons {
+            position: absolute;
+            bottom: 10%;
+
         }
     }
 }
 
 //Media
+@media(max-width:1200px) {
+    .prices {
+        &-header {
+            padding-bottom: 7rem;
+        }
+
+        &-slider {
+            &-header {
+                &-button {
+                    max-width: 43.5rem;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:991px) {
     .main {
         .logo {
@@ -241,17 +400,31 @@ input {
             }
         }
     }
-    .consultation{
-        background:none;
-        &-form{
-            button{
+
+    .consultation {
+        background: none;
+
+        &-form {
+            button {
                 font-size: 1.5rem;
+            }
+        }
+    }
+
+    .prices {
+
+        &-slider {
+            &-header {
+                &-button {
+                    max-width: 31.5rem;
+                    font-size: 1.6rem;
+                }
             }
         }
     }
 }
 
-@media (max-width:776px) {
+@media (max-width:769px) {
     .main {
         .logo {
             &-text {
@@ -259,13 +432,25 @@ input {
             }
         }
     }
-    .consultation{
-        &-form{
-            input{
-            margin-top: 2rem;
-            }
-            button{
+
+    .consultation {
+        &-form {
+            input {
                 margin-top: 2rem;
+            }
+
+            button {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .prices {
+        &-slider {
+            &-header {
+                &-button {
+                    max-width: 48rem;
+                }
             }
         }
     }
@@ -277,18 +462,35 @@ input {
             background: @bg-gradient;
         }
     }
-    .consultation{
-        &-header{
-            h2{
+
+    .consultation {
+        &-header {
+            h2 {
                 font-size: 3rem;
             }
-            span{
+
+            span {
                 font-size: 2.2rem;
             }
         }
-        .recall{
-            a{
+
+        .recall {
+            a {
                 display: block;
+            }
+        }
+    }
+
+    .prices {
+        &-slider {
+            &-block{
+                margin:0 auto;
+            }
+            &-header {
+                &-button {
+                    max-width: 93%;
+                    font-size: 1.6rem;
+                }
             }
         }
     }
@@ -312,18 +514,38 @@ input {
             }
         }
     }
-    .consultation{
-        &-header{
-            h2{
+
+    .consultation {
+        &-header {
+            h2 {
                 font-size: 2rem;
             }
-            span{
+
+            span {
                 font-size: 1.6rem;
             }
         }
-        &-form{
-            button{
+
+        &-form {
+            button {
                 font-size: 1.3rem;
+            }
+        }
+    }
+
+    .prices {
+        &-slider {
+            &-header{
+                button{
+                    font-size: 1.2rem;
+                }
+            }
+            &-img {
+                &-subtitle {
+                    span {
+                        font-size: 1rem;
+                    }
+                }
             }
         }
     }
