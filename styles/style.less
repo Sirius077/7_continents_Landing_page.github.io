@@ -68,7 +68,42 @@ body {
     margin-top: 10rem;
 
 }
+.form{
+    span {
+        display: block;
+        font-size: 1.6rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
 
+    input {
+        font-size: 1.6rem;
+    }
+
+    button {
+        font-size: 1.6rem;
+        line-height: 5.5rem;
+    }
+    .recall {
+        margin-top: 4rem;
+        padding-bottom: 10rem;
+
+        p {
+            display: inline-block;
+            font-size: 1.6rem;
+            margin-right: 1rem;
+        }
+
+        a {
+            .sec();
+            font-size: 2rem;
+            font-weight: 700;
+            color: @dark;
+            margin-left: 1rem;
+            word-break: keep-all;
+        }
+    }
+}
 button {
     font-size: 1.1rem;
     background-color: @button-color;
@@ -266,6 +301,7 @@ input {
     }
 
     &-slider {
+        padding-bottom: 10rem;
         &-header {
             &-button {
                 display: inline-block;
@@ -374,6 +410,82 @@ input {
     }
 }
 
+//Reservation
+.reservation {
+    background: @bg-gradient;
+    &-header {
+        margin-bottom: 7rem;
+    }
+
+    &-slider {
+        &-block {
+            img {
+                display: none;
+                margin: 0 auto;
+                max-width: 90%;
+            }
+
+            margin-right: 2rem;
+        }
+    }
+    &-features{
+        &-block{
+            margin-top: 8rem;
+            margin-bottom: 2rem;
+            p{
+                display: inline;
+                font-size: 2rem;
+                
+                
+            }
+        }
+        
+    }
+    &-form{
+        margin-top: 7rem;
+        border: 10.0px solid @secondary-color;
+        background: url(../img/reservation/woman.png) no-repeat right;
+        background-color: @light;
+        padding-top: 7rem;
+        padding-bottom: 0;
+            h3{
+                font-size: 2.2rem;
+                font-weight: 700;
+            }
+            .recall{
+                padding-bottom: 7rem;
+            }
+        }
+.arrow {
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+        width: 2rem;
+        height: 2rem;
+        border: none;
+
+    }
+
+    .prev {
+        position: absolute;
+        left: 2%;
+        background: url(../img/reservation/prevArrow.svg) center no-repeat;
+        background-size: 2rem;
+        background-color: rgba(241,230,240,0.5);
+        padding: 2rem;
+    }
+
+    .next {
+        position: absolute;
+        right: 2%;
+        background: url(../img/reservation/nextArrow.svg) center no-repeat;
+        background-size: 2rem;
+        background-color: rgba(241,230,240,0.5);
+        padding: 2rem;
+    }
+    
+}
+
 //Media
 @media(max-width:1200px) {
     .prices {
@@ -385,6 +497,15 @@ input {
             &-header {
                 &-button {
                     max-width: 43.5rem;
+                }
+            }
+        }
+    }
+    .reservation{
+        &-features{
+            &-block{
+                p{
+                    font-size: 1.7rem;
                 }
             }
         }
@@ -422,6 +543,14 @@ input {
             }
         }
     }
+    .reservation{
+        &-form{
+            background: @light;
+            button{
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
 @media (max-width:769px) {
@@ -450,6 +579,23 @@ input {
             &-header {
                 &-button {
                     max-width: 48rem;
+                }
+            }
+        }
+    }
+    .reservation{
+        &-form{
+            background: none;
+            input {
+                margin-top: 2rem;
+            }
+
+            button {
+                margin-top: 2rem;
+            }
+            .recall{
+                a{
+                    white-space:nowrap;
                 }
             }
         }
@@ -483,14 +629,20 @@ input {
 
     .prices {
         &-slider {
-            &-block{
-                margin:0 auto;
-            }
             &-header {
                 &-button {
-                    max-width: 93%;
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 6rem;
+                    max-width: 90%;
                     font-size: 1.6rem;
                 }
+            }
+
+            &-description {
+                display: block;
+                margin: 0 auto;
+                max-width: 90%;
             }
         }
     }
@@ -535,17 +687,34 @@ input {
 
     .prices {
         &-slider {
-            &-header{
-                button{
+            &-header {
+                button {
                     font-size: 1.2rem;
                 }
             }
+
             &-img {
                 &-subtitle {
                     span {
                         font-size: 1rem;
                     }
                 }
+            }
+        }
+    }
+    .reservation{
+        &-header{
+            h2{
+                font-size: 2rem;
+            }
+            span{
+                font-size: 1.8rem;
+            }
+        }
+        &-form{
+            border:none;
+            button{
+                font-size: 1.2rem;
             }
         }
     }

@@ -31,6 +31,36 @@ body {
 .section-header span {
   font-size: 2.2rem;
 }
+.form span {
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.form input {
+  font-size: 1.6rem;
+}
+.form button {
+  font-size: 1.6rem;
+  line-height: 5.5rem;
+}
+.form .recall {
+  margin-top: 4rem;
+  padding-bottom: 10rem;
+}
+.form .recall p {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+.form .recall a {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-left: 1rem;
+  word-break: keep-all;
+}
 button {
   font-size: 1.1rem;
   background-color: #ffaf02;
@@ -184,6 +214,9 @@ input {
 .prices-header {
   padding-bottom: 7rem;
 }
+.prices-slider {
+  padding-bottom: 10rem;
+}
 .prices-slider-header-button {
   display: inline-block;
   max-width: 34rem;
@@ -269,12 +302,76 @@ input {
   position: absolute;
   bottom: 10%;
 }
+.reservation {
+  background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
+}
+.reservation-header {
+  margin-bottom: 7rem;
+}
+.reservation-slider-block {
+  margin-right: 2rem;
+}
+.reservation-slider-block img {
+  display: none;
+  margin: 0 auto;
+  max-width: 90%;
+}
+.reservation-features-block {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+.reservation-features-block p {
+  display: inline;
+  font-size: 2rem;
+}
+.reservation-form {
+  margin-top: 7rem;
+  border: 10px solid #d8f0f0;
+  background: url(../img/reservation/woman.png) no-repeat right;
+  background-color: #fff;
+  padding-top: 7rem;
+  padding-bottom: 0;
+}
+.reservation-form h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.reservation-form .recall {
+  padding-bottom: 7rem;
+}
+.reservation .arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+}
+.reservation .prev {
+  position: absolute;
+  left: 2%;
+  background: url(../img/reservation/prevArrow.svg) center no-repeat;
+  background-size: 2rem;
+  background-color: rgba(241, 230, 240, 0.5);
+  padding: 2rem;
+}
+.reservation .next {
+  position: absolute;
+  right: 2%;
+  background: url(../img/reservation/nextArrow.svg) center no-repeat;
+  background-size: 2rem;
+  background-color: rgba(241, 230, 240, 0.5);
+  padding: 2rem;
+}
 @media (max-width: 1200px) {
   .prices-header {
     padding-bottom: 7rem;
   }
   .prices-slider-header-button {
     max-width: 43.5rem;
+  }
+  .reservation-features-block p {
+    font-size: 1.7rem;
   }
 }
 @media (max-width: 991px) {
@@ -292,6 +389,12 @@ input {
     max-width: 31.5rem;
     font-size: 1.6rem;
   }
+  .reservation-form {
+    background: #fff;
+  }
+  .reservation-form button {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 769px) {
   .main .logo-text {
@@ -305,6 +408,18 @@ input {
   }
   .prices-slider-header-button {
     max-width: 48rem;
+  }
+  .reservation-form {
+    background: none;
+  }
+  .reservation-form input {
+    margin-top: 2rem;
+  }
+  .reservation-form button {
+    margin-top: 2rem;
+  }
+  .reservation-form .recall a {
+    white-space: nowrap;
   }
 }
 @media (max-width: 576px) {
@@ -320,12 +435,17 @@ input {
   .consultation .recall a {
     display: block;
   }
-  .prices-slider-block {
-    margin: 0 auto;
-  }
   .prices-slider-header-button {
-    max-width: 93%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    max-width: 90%;
     font-size: 1.6rem;
+  }
+  .prices-slider-description {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
   }
 }
 @media (max-width: 487px) {
@@ -352,5 +472,17 @@ input {
   }
   .prices-slider-img-subtitle span {
     font-size: 1rem;
+  }
+  .reservation-header h2 {
+    font-size: 2rem;
+  }
+  .reservation-header span {
+    font-size: 1.8rem;
+  }
+  .reservation-form {
+    border: none;
+  }
+  .reservation-form button {
+    font-size: 1.2rem;
   }
 }
