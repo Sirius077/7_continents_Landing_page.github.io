@@ -49,8 +49,11 @@ body {
 
 }
 
-.section {
+section {
+    padding-bottom: 10rem;
+}
 
+.section {
     &-header {
         padding-top: 10rem;
 
@@ -68,7 +71,8 @@ body {
     margin-top: 10rem;
 
 }
-.form{
+
+.form {
     span {
         display: block;
         font-size: 1.6rem;
@@ -84,6 +88,7 @@ body {
         font-size: 1.6rem;
         line-height: 5.5rem;
     }
+
     .recall {
         margin-top: 4rem;
         padding-bottom: 10rem;
@@ -104,6 +109,7 @@ body {
         }
     }
 }
+
 button {
     font-size: 1.1rem;
     background-color: @button-color;
@@ -302,6 +308,7 @@ input {
 
     &-slider {
         padding-bottom: 10rem;
+
         &-header {
             &-button {
                 display: inline-block;
@@ -413,6 +420,7 @@ input {
 //Reservation
 .reservation {
     background: @bg-gradient;
+
     &-header {
         margin-bottom: 7rem;
     }
@@ -428,35 +436,41 @@ input {
             margin-right: 2rem;
         }
     }
-    &-features{
-        &-block{
+
+    &-features {
+        &-block {
             margin-top: 8rem;
             margin-bottom: 2rem;
-            p{
+
+            p {
                 display: inline;
                 font-size: 2rem;
-                
-                
+
+
             }
         }
-        
+
     }
-    &-form{
+
+    &-form {
         margin-top: 7rem;
         border: 10.0px solid @secondary-color;
         background: url(../img/reservation/woman.png) no-repeat right;
         background-color: @light;
         padding-top: 7rem;
         padding-bottom: 0;
-            h3{
-                font-size: 2.2rem;
-                font-weight: 700;
-            }
-            .recall{
-                padding-bottom: 7rem;
-            }
+
+        h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
         }
-.arrow {
+
+        .recall {
+            padding-bottom: 7rem;
+        }
+    }
+
+    .arrow {
         top: 50%;
         transform: translateY(-50%);
         z-index: 99;
@@ -471,7 +485,7 @@ input {
         left: 2%;
         background: url(../img/reservation/prevArrow.svg) center no-repeat;
         background-size: 2rem;
-        background-color: rgba(241,230,240,0.5);
+        background-color: rgba(241, 230, 240, 0.5);
         padding: 2rem;
     }
 
@@ -480,10 +494,66 @@ input {
         right: 2%;
         background: url(../img/reservation/nextArrow.svg) center no-repeat;
         background-size: 2rem;
-        background-color: rgba(241,230,240,0.5);
+        background-color: rgba(241, 230, 240, 0.5);
         padding: 2rem;
     }
-    
+
+}
+
+//Certificate
+.certificate {
+    padding-top: 10rem;
+
+    &-document {
+        background-size: 100rem;
+        border: 15.0px solid @secondary-color;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    &-description {
+        h2 {
+            .sec();
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 2rem;
+            padding: 5.5rem 0;
+        }
+
+        h4 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            padding-bottom: 2rem;
+        }
+
+        span {
+            font-size: 2rem;
+        }
+    }
+
+    &-form {
+        background: url(../img/certificate/letter.png) no-repeat bottom right;
+        margin-top: 7rem;
+        border: 10.0px solid @secondary-color;
+
+        h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            padding-top: 7rem;
+        }
+
+        span {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        .recall {
+            padding-bottom: 5rem;
+        }
+    }
 }
 
 //Media
@@ -501,10 +571,11 @@ input {
             }
         }
     }
-    .reservation{
-        &-features{
-            &-block{
-                p{
+
+    .reservation {
+        &-features {
+            &-block {
+                p {
                     font-size: 1.7rem;
                 }
             }
@@ -513,6 +584,12 @@ input {
 }
 
 @media (max-width:991px) {
+    .form {
+        button {
+            font-size: 1.5rem;
+        }
+    }
+
     .main {
         .logo {
             &-text {
@@ -543,17 +620,35 @@ input {
             }
         }
     }
-    .reservation{
-        &-form{
+
+    .reservation {
+        &-form {
             background: @light;
-            button{
+
+            button {
                 font-size: 1.5rem;
             }
+        }
+    }
+
+    .certificate {
+        &-document {
+            margin-bottom: 5rem;
+            border: 10px solid @secondary-color;
         }
     }
 }
 
 @media (max-width:769px) {
+    .form{
+        input {
+            margin-top: 2rem;
+        }
+
+        button {
+            margin-top: 2rem;
+        }
+    }
     .main {
         .logo {
             &-text {
@@ -583,9 +678,11 @@ input {
             }
         }
     }
-    .reservation{
-        &-form{
+
+    .reservation {
+        &-form {
             background: none;
+
             input {
                 margin-top: 2rem;
             }
@@ -593,9 +690,10 @@ input {
             button {
                 margin-top: 2rem;
             }
-            .recall{
-                a{
-                    white-space:nowrap;
+
+            .recall {
+                a {
+                    white-space: nowrap;
                 }
             }
         }
@@ -606,6 +704,9 @@ input {
     .main {
         .hero {
             background: @bg-gradient;
+        }
+        &-button{
+            margin-bottom: 2rem;
         }
     }
 
@@ -623,6 +724,7 @@ input {
         .recall {
             a {
                 display: block;
+                white-space: space nowrap;
             }
         }
     }
@@ -646,9 +748,22 @@ input {
             }
         }
     }
+    
+    .certificate{
+        &-document{
+            border:none;
+            margin:0 -4rem;
+        }
+    }
 }
 
 @media (max-width:487px) {
+    .form{
+            border: none;
+            button {
+                font-size: 1.2rem;
+            }
+    }
     .main {
         &-content {
             h1 {
@@ -702,20 +817,34 @@ input {
             }
         }
     }
-    .reservation{
-        &-header{
-            h2{
+
+    .reservation {
+        &-header {
+            h2 {
                 font-size: 2rem;
             }
-            span{
+
+            span {
                 font-size: 1.8rem;
             }
         }
-        &-form{
-            border:none;
-            button{
+
+        &-form {
+            border: none;
+
+            button {
                 font-size: 1.2rem;
             }
+        }
+    }
+    .certificate{
+        &-document{
+            border:none;
+            margin:0 -6rem;
+        }
+        &-form{
+            background: none;
+            border:none;
         }
     }
 }

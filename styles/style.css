@@ -17,6 +17,9 @@ body {
   font-family: 'Circe-Regular', sans-serif;
   color: #001e28;
 }
+section {
+  padding-bottom: 10rem;
+}
 .section {
   margin-top: 10rem;
 }
@@ -363,6 +366,49 @@ input {
   background-color: rgba(241, 230, 240, 0.5);
   padding: 2rem;
 }
+.certificate {
+  padding-top: 10rem;
+}
+.certificate-document {
+  background-size: 100rem;
+  border: 15px solid #d8f0f0;
+  border-top: none;
+  border-bottom: none;
+}
+.certificate-description h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.certificate-description p {
+  font-size: 2rem;
+  padding: 5.5rem 0;
+}
+.certificate-description h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+.certificate-description span {
+  font-size: 2rem;
+}
+.certificate-form {
+  background: url(../img/certificate/letter.png) no-repeat bottom right;
+  margin-top: 7rem;
+  border: 10px solid #d8f0f0;
+}
+.certificate-form h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-top: 7rem;
+}
+.certificate-form span {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.certificate-form .recall {
+  padding-bottom: 5rem;
+}
 @media (max-width: 1200px) {
   .prices-header {
     padding-bottom: 7rem;
@@ -375,6 +421,9 @@ input {
   }
 }
 @media (max-width: 991px) {
+  .form button {
+    font-size: 1.5rem;
+  }
   .main .logo-text {
     font-size: 1.4rem;
     margin-left: 2rem;
@@ -395,8 +444,18 @@ input {
   .reservation-form button {
     font-size: 1.5rem;
   }
+  .certificate-document {
+    margin-bottom: 5rem;
+    border: 10px solid #d8f0f0;
+  }
 }
 @media (max-width: 769px) {
+  .form input {
+    margin-top: 2rem;
+  }
+  .form button {
+    margin-top: 2rem;
+  }
   .main .logo-text {
     margin-left: 0;
   }
@@ -426,6 +485,9 @@ input {
   .main .hero {
     background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
   }
+  .main-button {
+    margin-bottom: 2rem;
+  }
   .consultation-header h2 {
     font-size: 3rem;
   }
@@ -434,6 +496,7 @@ input {
   }
   .consultation .recall a {
     display: block;
+    white-space: space nowrap;
   }
   .prices-slider-header-button {
     display: block;
@@ -447,8 +510,18 @@ input {
     margin: 0 auto;
     max-width: 90%;
   }
+  .certificate-document {
+    border: none;
+    margin: 0 -4rem;
+  }
 }
 @media (max-width: 487px) {
+  .form {
+    border: none;
+  }
+  .form button {
+    font-size: 1.2rem;
+  }
   .main-content h1 {
     font-size: 4.2rem;
   }
@@ -484,5 +557,13 @@ input {
   }
   .reservation-form button {
     font-size: 1.2rem;
+  }
+  .certificate-document {
+    border: none;
+    margin: 0 -6rem;
+  }
+  .certificate-form {
+    background: none;
+    border: none;
   }
 }
