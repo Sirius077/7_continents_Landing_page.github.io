@@ -366,48 +366,21 @@ input {
   background-color: rgba(241, 230, 240, 0.5);
   padding: 2rem;
 }
-.certificate {
-  padding-top: 10rem;
+.features {
+  background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
 }
-.certificate-document {
-  background-size: 100rem;
-  border: 15px solid #d8f0f0;
-  border-top: none;
-  border-bottom: none;
+.features-header {
+  margin-bottom: 10rem;
 }
-.certificate-description h2 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 3rem;
-  font-weight: 700;
+.features-block {
+  margin-bottom: 10rem;
 }
-.certificate-description p {
-  font-size: 2rem;
-  padding: 5.5rem 0;
-}
-.certificate-description h4 {
+.features-block h4 {
   font-size: 2.2rem;
   font-weight: 700;
-  padding-bottom: 2rem;
 }
-.certificate-description span {
-  font-size: 2rem;
-}
-.certificate-form {
-  background: url(../img/certificate/letter.png) no-repeat bottom right;
-  margin-top: 7rem;
-  border: 10px solid #d8f0f0;
-}
-.certificate-form h3 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  padding-top: 7rem;
-}
-.certificate-form span {
-  font-size: 1.6rem;
-  text-align: center;
-}
-.certificate-form .recall {
-  padding-bottom: 5rem;
+.features-block p {
+  font-size: 1.7rem;
 }
 @media (max-width: 1200px) {
   .prices-header {
@@ -444,9 +417,8 @@ input {
   .reservation-form button {
     font-size: 1.5rem;
   }
-  .certificate-document {
-    margin-bottom: 5rem;
-    border: 10px solid #d8f0f0;
+  .features-header h2 {
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 769px) {
@@ -510,10 +482,6 @@ input {
     margin: 0 auto;
     max-width: 90%;
   }
-  .certificate-document {
-    border: none;
-    margin: 0 -4rem;
-  }
 }
 @media (max-width: 487px) {
   .form {
@@ -558,12 +526,16 @@ input {
   .reservation-form button {
     font-size: 1.2rem;
   }
-  .certificate-document {
-    border: none;
-    margin: 0 -6rem;
+  .features-header h2 {
+    font-size: 1.6rem;
   }
-  .certificate-form {
-    background: none;
-    border: none;
+  .features-block img {
+    width: 20%;
+  }
+  .features-block h4 {
+    font-size: 1.6rem;
+  }
+  .features-block p {
+    font-size: 1.2rem;
   }
 }

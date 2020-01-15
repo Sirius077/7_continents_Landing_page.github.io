@@ -500,58 +500,26 @@ input {
 
 }
 
-//Certificate
-.certificate {
-    padding-top: 10rem;
 
-    &-document {
-        background-size: 100rem;
-        border: 15.0px solid @secondary-color;
-        border-top: none;
-        border-bottom: none;
+
+//Features
+.features {
+    background: @bg-gradient;
+
+    &-header {
+        margin-bottom: 10rem;
     }
 
-    &-description {
-        h2 {
-            .sec();
-            font-size: 3rem;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 2rem;
-            padding: 5.5rem 0;
-        }
+    &-block {
+        margin-bottom: 10rem;
 
         h4 {
             font-size: 2.2rem;
             font-weight: 700;
-            padding-bottom: 2rem;
         }
 
-        span {
-            font-size: 2rem;
-        }
-    }
-
-    &-form {
-        background: url(../img/certificate/letter.png) no-repeat bottom right;
-        margin-top: 7rem;
-        border: 10.0px solid @secondary-color;
-
-        h3 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            padding-top: 7rem;
-        }
-
-        span {
-            font-size: 1.6rem;
-            text-align: center;
-        }
-
-        .recall {
-            padding-bottom: 5rem;
+        p {
+            font-size: 1.7rem;
         }
     }
 }
@@ -631,16 +599,18 @@ input {
         }
     }
 
-    .certificate {
-        &-document {
-            margin-bottom: 5rem;
-            border: 10px solid @secondary-color;
+    
+    .features{
+        &-header{
+            h2{
+                font-size: 2.2rem;
+            }
         }
     }
 }
 
 @media (max-width:769px) {
-    .form{
+    .form {
         input {
             margin-top: 2rem;
         }
@@ -649,6 +619,7 @@ input {
             margin-top: 2rem;
         }
     }
+
     .main {
         .logo {
             &-text {
@@ -705,7 +676,8 @@ input {
         .hero {
             background: @bg-gradient;
         }
-        &-button{
+
+        &-button {
             margin-bottom: 2rem;
         }
     }
@@ -748,22 +720,17 @@ input {
             }
         }
     }
-    
-    .certificate{
-        &-document{
-            border:none;
-            margin:0 -4rem;
-        }
-    }
 }
 
 @media (max-width:487px) {
-    .form{
-            border: none;
-            button {
-                font-size: 1.2rem;
-            }
+    .form {
+        border: none;
+
+        button {
+            font-size: 1.2rem;
+        }
     }
+
     .main {
         &-content {
             h1 {
@@ -837,14 +804,23 @@ input {
             }
         }
     }
-    .certificate{
-        &-document{
-            border:none;
-            margin:0 -6rem;
+
+    .features{
+        &-header{
+            h2{
+                font-size: 1.6rem;
+            }
         }
-        &-form{
-            background: none;
-            border:none;
+        &-block{
+            img{
+                width: 20%;
+            }
+            h4{
+                font-size: 1.6rem;
+            }
+            p{
+                font-size: 1.2rem;
+            }
         }
     }
 }
