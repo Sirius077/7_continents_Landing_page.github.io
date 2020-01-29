@@ -382,6 +382,42 @@ input {
 .features-block p {
   font-size: 1.7rem;
 }
+.safety {
+  background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
+}
+.safety-header span {
+  font-weight: 700;
+  padding-bottom: 6rem;
+}
+.safety-stages-title h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding: 4rem 0;
+}
+.safety-stages-block {
+  padding-bottom: 10rem;
+}
+.safety-stages-block p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+.safety-stages-block h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+.safety-stages-block li {
+  list-style-type: none ;
+}
+.safety-stages-block li ul {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
 @media (max-width: 1200px) {
   .prices-header {
     padding-bottom: 7rem;
@@ -454,6 +490,12 @@ input {
   }
 }
 @media (max-width: 576px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  .section-header span {
+    font-size: 1.8rem;
+  }
   .main .hero {
     background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
   }
@@ -484,6 +526,12 @@ input {
   }
 }
 @media (max-width: 487px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  .section-header span {
+    font-size: 1.6rem;
+  }
   .form {
     border: none;
   }
@@ -491,7 +539,7 @@ input {
     font-size: 1.2rem;
   }
   .main-content h1 {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
   }
   .main-content span {
     font-size: 2.6rem;
@@ -526,16 +574,13 @@ input {
   .reservation-form button {
     font-size: 1.2rem;
   }
-  .features-header h2 {
-    font-size: 1.6rem;
-  }
   .features-block img {
     width: 20%;
   }
   .features-block h4 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
   .features-block p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }

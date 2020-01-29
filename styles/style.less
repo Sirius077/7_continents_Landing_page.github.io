@@ -524,6 +524,53 @@ input {
     }
 }
 
+//Safety
+.safety{
+    background: @bg-gradient;
+    &-header{
+        span{
+            font-weight: 700;
+            padding-bottom: 6rem;
+        }
+    }
+    &-stages{
+        &-title{
+            h3{
+                font-size: 2.2rem;
+                font-weight: 700;
+                padding:4rem 0;
+            }
+        }
+            &-block{
+                padding-bottom: 10rem;
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    padding-bottom: 3rem;
+                }
+                h4{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                    padding-top: 4rem;
+                    padding-bottom: 2rem;
+                }
+                li{
+                    list-style-type:none ;
+
+                   ul{
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    line-height: 1.2;
+                    list-style-type:none;
+                    padding-inline-start: 0;
+                } 
+                }
+                
+            }
+        
+    }
+}
+
 //Media
 @media(max-width:1200px) {
     .prices {
@@ -672,6 +719,14 @@ input {
 }
 
 @media (max-width:576px) {
+    .section-header{
+        h2{
+            font-size: 2rem;
+        }
+        span{
+            font-size: 1.8rem;
+        }
+    }
     .main {
         .hero {
             background: @bg-gradient;
@@ -720,9 +775,22 @@ input {
             }
         }
     }
+    .safety{
+        &-header{
+
+        }
+    }
 }
 
 @media (max-width:487px) {
+    .section-header{
+        h2{
+            font-size: 2rem;
+        }
+        span{
+            font-size: 1.6rem;
+        }
+    }
     .form {
         border: none;
 
@@ -734,7 +802,7 @@ input {
     .main {
         &-content {
             h1 {
-                font-size: 4.2rem;
+                font-size: 3.2rem;
             }
 
             span {
@@ -806,20 +874,15 @@ input {
     }
 
     .features{
-        &-header{
-            h2{
-                font-size: 1.6rem;
-            }
-        }
         &-block{
             img{
                 width: 20%;
             }
             h4{
-                font-size: 1.6rem;
+                font-size: 1.7rem;
             }
             p{
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
         }
     }

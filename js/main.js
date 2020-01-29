@@ -56,19 +56,30 @@ $(document).ready(function () {
                 prevArrow: "<button class='prev arrow'></button>",
                 nextArrow: "<button class='next arrow'></button>"
             }
-        },{
-            
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    prevArrow: "<button class='prev arrow'></button>",
-                    nextArrow: "<button class='next arrow'></button>"
-                }
-            
-        }
-    ]
+        }, {
+
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: "<button class='prev arrow'></button>",
+                nextArrow: "<button class='next arrow'></button>"
+            }
+
+        }]
     });
+    $('.safety-slider').slick({
+        slidesToShow: 5,
+        infinite: true,
+        speed: 400,
+        autoplay: true,
+        autoplaySpeed: 1600,
+        variableWidth: true,
+        swipeToSlide:true,
+        focusOnSelect:true,
+        prevArrow: "none",
+        nextArrow: "none"
+    })
 });
 
 //   In jquery    $('.prices-slider-header-button').on('click',function (e) { 
