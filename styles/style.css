@@ -451,20 +451,20 @@ input {
   font-size: 1.8rem;
   padding-top: 3rem;
 }
-.contacts {
+.contact {
   background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
 }
-.contacts-number {
+.contact-number {
   font-size: 1.8rem;
   font-weight: 700;
   padding-bottom: 4rem;
   padding-top: 4rem;
 }
-.contacts .location {
+.contact .location {
   font-size: 1.8rem;
   padding-bottom: 4rem;
 }
-.contacts h4 {
+.contact h4 {
   font-size: 1.5rem;
   color: #007ca5;
 }
