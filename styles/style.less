@@ -34,9 +34,11 @@
 @light: #fff;
 @dark: #000;
 @border-color: #d1d1d1;
+@documents-border: #cce9e6;
 @zigzag-color: linear-gradient(-135deg, #00cbff 8px, transparent 0) 0 8px, linear-gradient(135deg, #00cbff 8px, transparent 0) 0 8px;
 @text-color: #001e28;
 @secondary-color: #d8f0f0;
+@contacts-color: #007ca5;
 
 
 html {
@@ -46,7 +48,7 @@ html {
 body {
     .reg();
     color: @text-color;
-
+    font-size: 1.6rem;
 }
 
 section {
@@ -525,49 +527,122 @@ input {
 }
 
 //Safety
-.safety{
+.safety {
     background: @bg-gradient;
-    &-header{
-        span{
+
+    &-header {
+        span {
             font-weight: 700;
             padding-bottom: 6rem;
         }
     }
-    &-stages{
-        &-title{
-            h3{
+
+    &-stages {
+        &-title {
+            h3 {
                 font-size: 2.2rem;
                 font-weight: 700;
-                padding:4rem 0;
+                padding: 4rem 0;
             }
         }
-            &-block{
-                padding-bottom: 10rem;
-                p{
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                    padding-bottom: 3rem;
-                }
-                h4{
-                    font-size: 2.2rem;
-                    font-weight: 700;
-                    padding-top: 4rem;
-                    padding-bottom: 2rem;
-                }
-                li{
-                    list-style-type:none ;
 
-                   ul{
+        &-block {
+            padding-bottom: 10rem;
+
+            p {
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding-bottom: 3rem;
+            }
+
+            h4 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                padding-top: 4rem;
+                padding-bottom: 2rem;
+            }
+
+            li {
+                list-style-type: none;
+
+                ul {
                     font-size: 1.5rem;
                     font-weight: 300;
                     line-height: 1.2;
-                    list-style-type:none;
+                    list-style-type: none;
                     padding-inline-start: 0;
-                } 
                 }
-                
             }
-        
+
+        }
+
+    }
+}
+
+//Happy-holiday
+.holiday {
+    background: url(../img/happy_holiday/holiday_bg.jpg) no-repeat bottom;
+
+    &-header {
+        margin-bottom: 10rem;
+
+    }
+
+    &-steps {
+        &-block {
+            margin-bottom: 10rem;
+
+            p {
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 2.2rem;
+                padding-top: 3.5rem;
+            }
+        }
+    }
+}
+
+//Documents
+.documents {
+    background: @bg-gradient;
+
+    &-header {
+        margin-bottom: 10rem;
+    }
+
+    &-block {
+        padding-left: 2rem;
+
+        img {
+            border: 1.5rem @documents-border solid;
+            border-bottom: none;
+        }
+
+        p {
+            font-size: 1.8rem;
+            padding-top: 3rem;
+        }
+    }
+}
+
+
+//Contacts
+.contacts {
+    background: @bg-gradient;
+    &-number{
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+    }
+    .location {
+        font-size: 1.8rem;
+        padding-bottom: 4rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        color: @contacts-color;
     }
 }
 
@@ -646,12 +721,27 @@ input {
         }
     }
 
-    
-    .features{
-        &-header{
-            h2{
+
+    .features {
+        &-header {
+            h2 {
                 font-size: 2.2rem;
             }
+        }
+    }
+
+    .documents {
+        &-block {
+            margin-top: 2rem;
+            padding-left: 0rem;
+        }
+    }
+    .contacts{
+        &-header{
+            h2{
+                font-size: 2rem;
+            }
+            
         }
     }
 }
@@ -716,17 +806,24 @@ input {
             }
         }
     }
+    .contacts{
+        &-content{
+            margin-bottom: 3rem;
+        }
+    }
 }
 
 @media (max-width:576px) {
-    .section-header{
-        h2{
+    .section-header {
+        h2 {
             font-size: 2rem;
         }
-        span{
+
+        span {
             font-size: 1.8rem;
         }
     }
+
     .main {
         .hero {
             background: @bg-gradient;
@@ -775,22 +872,20 @@ input {
             }
         }
     }
-    .safety{
-        &-header{
 
-        }
-    }
 }
 
 @media (max-width:487px) {
-    .section-header{
-        h2{
+    .section-header {
+        h2 {
             font-size: 2rem;
         }
-        span{
+
+        span {
             font-size: 1.6rem;
         }
     }
+
     .form {
         border: none;
 
@@ -873,15 +968,17 @@ input {
         }
     }
 
-    .features{
-        &-block{
-            img{
+    .features {
+        &-block {
+            img {
                 width: 20%;
             }
-            h4{
+
+            h4 {
                 font-size: 1.7rem;
             }
-            p{
+
+            p {
                 font-size: 1.3rem;
             }
         }

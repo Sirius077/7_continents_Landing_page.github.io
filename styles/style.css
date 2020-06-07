@@ -16,6 +16,7 @@ html {
 body {
   font-family: 'Circe-Regular', sans-serif;
   color: #001e28;
+  font-size: 1.6rem;
 }
 section {
   padding-bottom: 10rem;
@@ -409,7 +410,7 @@ input {
   padding-bottom: 2rem;
 }
 .safety-stages-block li {
-  list-style-type: none ;
+  list-style-type: none;
 }
 .safety-stages-block li ul {
   font-size: 1.5rem;
@@ -417,6 +418,55 @@ input {
   line-height: 1.2;
   list-style-type: none;
   padding-inline-start: 0;
+}
+.holiday {
+  background: url(../img/happy_holiday/holiday_bg.jpg) no-repeat bottom;
+}
+.holiday-header {
+  margin-bottom: 10rem;
+}
+.holiday-steps-block {
+  margin-bottom: 10rem;
+}
+.holiday-steps-block p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  padding-top: 3.5rem;
+}
+.documents {
+  background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
+}
+.documents-header {
+  margin-bottom: 10rem;
+}
+.documents-block {
+  padding-left: 2rem;
+}
+.documents-block img {
+  border: 1.5rem #cce9e6 solid;
+  border-bottom: none;
+}
+.documents-block p {
+  font-size: 1.8rem;
+  padding-top: 3rem;
+}
+.contacts {
+  background: linear-gradient(149deg, #d8f0f0 15%, #fdfde0 84%);
+}
+.contacts-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+.contacts .location {
+  font-size: 1.8rem;
+  padding-bottom: 4rem;
+}
+.contacts h4 {
+  font-size: 1.5rem;
+  color: #007ca5;
 }
 @media (max-width: 1200px) {
   .prices-header {
@@ -456,6 +506,13 @@ input {
   .features-header h2 {
     font-size: 2.2rem;
   }
+  .documents-block {
+    margin-top: 2rem;
+    padding-left: 0rem;
+  }
+  .contacts-header h2 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 769px) {
   .form input {
@@ -487,6 +544,9 @@ input {
   }
   .reservation-form .recall a {
     white-space: nowrap;
+  }
+  .contacts-content {
+    margin-bottom: 3rem;
   }
 }
 @media (max-width: 576px) {
